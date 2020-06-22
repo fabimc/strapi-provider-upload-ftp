@@ -1,0 +1,39 @@
+{
+  "name": "strapi-provider-upload-ftp-v2",
+  "version": "1.0.0",
+  "description": "FTP provider for Strapi CMS file upload.",
+  "private": false,
+  "strapi": {
+    "isProvider": true
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "main": "./lib",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabimc/strapi-provider-upload-ftp"
+  },
+  "keywords": [
+    "ftp",
+    "strapi",
+    "provider",
+    "file upload"
+  ],
+  "author": {
+    "name": "Fabián Montealegre",
+    "email": "fabimc@gmail.com",
+    "url": "https://github.com/fabimc"
+  },
+  "bugs": {
+    "url": "https://github.com/fabimc/strapi-provider-upload-ftp/issues"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/fabimc/strapi-provider-upload-ftp#readme",
+  "dependencies": {
+    "ftp": "^0.3.10"
+  },
+  "scripts": {
+    "test": "echo \"no tests yet\""
+  }
+}
