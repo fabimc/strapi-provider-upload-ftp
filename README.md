@@ -1,8 +1,14 @@
-# strapi-provider-upload-ftp-v2
+# strapi-provider-upload-ftp
 
 FTP provider for Strapi CMS file upload.
 
-**Example**
+## Installation
+
+```
+yarn add strapi-provider-upload-ftp-v2
+```
+
+## Config
 
 `./extensions/upload/config/settings.json`
 
