@@ -1,6 +1,6 @@
 {
   "name": "strapi-provider-upload-ftp-v2",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "FTP provider for Strapi CMS file upload.",
   "private": false,
   "strapi": {

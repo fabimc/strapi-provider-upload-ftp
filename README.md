@@ -1,4 +1,4 @@
-# strapi-provider-upload-ftp
+# strapi-provider-upload-ftp-v2
 
 FTP provider for Strapi CMS file upload.
 
@@ -10,7 +10,7 @@ yarn add strapi-provider-upload-ftp-v2
 
 ## Config
 
-`./extensions/upload/config/settings.json`
+`./config/plugins.js`
 
 ```
 module.exports = ({ env }) => ({
