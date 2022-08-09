@@ -15,37 +15,23 @@ yarn add strapi-provider-upload-ftp-v2
 ```
 module.exports = ({ env }) => ({
   upload: {
-    provider: 'ftp-v2',
-    providerOptions: {
-      host: env('FTP_HOST'),
-      port: env('FTP_PORT'),
-      user: env('FTP_USER'),
-      password: env('FTP_PASSWORD'),
-      basePath: env('FTP_BASEPATH'),
-      baseUrl: env('FTP_BASEURL'),
+    config: {
+      provider: "strapi-provider-upload-ftp-v2",
+      providerOptions: {
+        host: env("FTP_HOST"),
+        port: env("FTP_PORT"),
+        user: env("FTP_USER"),
+        password: env("FTP_PASSWORD"),
+        basePath: env("FTP_BASEPATH"),
+        baseUrl: env("FTP_BASEURL"),
+      },
     },
   },
 });
 ```
 
-Currently the Strapi middleware in charge of parsing request needs to be configured to support bigger file sizes if you need to upload file with a size greater than 200MB.
-
-The library we use is koa-body, and itself uses the node-formidable library to process files.
-
-You can pass configuration to the middleware directly by setting it in the parser middleware configuration:
-
-```
-{
-  "parser": {
-    "enabled": true,
-    "multipart": true,
-    "formidable": {
-      "maxFileSize": 20000000 // defaults to 200mb
-    }
-  }
-}
-```
-Read more [here](https://strapi.io/documentation/v3.x/plugins/upload.html#upload)
+Currently the Strapi middleware in charge of parsing requests needs to be configured to support file sizes larger than the default of 200MB in addition to provider options passed to the upload plugin for sizeLimit.
+Read more [here](https://docs.strapi.io/developer-docs/latest/plugins/upload.html#configuration).
 
 ## Resources
 
