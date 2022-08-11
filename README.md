@@ -1,6 +1,6 @@
 # strapi-provider-upload-ftp-v2
 
-FTP provider for Strapi CMS file upload.
+FTP provider for Strapi v4 file upload. 
 
 ## Installation
 
@@ -29,6 +29,7 @@ module.exports = ({ env }) => ({
   },
 });
 ```
+For older strapi versions you'll need to tweak the `./config/plugins.js` file, but it has been tested down to version 3.6
 
 Currently the Strapi middleware in charge of parsing requests needs to be configured to support file sizes larger than the default of 200MB in addition to provider options passed to the upload plugin for sizeLimit.
 Read more [here](https://docs.strapi.io/developer-docs/latest/plugins/upload.html#configuration).
